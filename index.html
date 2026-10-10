@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dakshineswar Varities Stores | Ramnagar, West Bengal</title>
+<meta name="description" content="Dakshineswar Varities Stores, Ramnagar - artificial jewellery, flower jewellery, cosmetics, hair accessories, bags and gifts. Open Monday to Sunday, 8am-8pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#7a1230; --maroon-d:#5a0c22; --gold:#c9962b; --gold-l:#f3e3b8;
+  --cream:#fff9ee; --ink:#2b1b1f; --muted:#6f5d62; --card:#ffffff; --line:#ecdcc0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Playfair Display','Hind Siliguri',serif;line-height:1.2}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,249,238,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;color:var(--maroon);font-size:1.15rem}
+.brand span{color:var(--gold)}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--maroon)}
+.call-btn{background:var(--maroon);color:#fff;padding:8px 16px;border-radius:999px;font-weight:600;font-size:.9rem}
+@media(max-width:760px){nav ul{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--maroon-d),var(--maroon) 60%,#a02245);color:#fff;padding:72px 0 80px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(243,227,184,.25);box-shadow:0 0 0 40px rgba(243,227,184,.06),0 0 0 90px rgba(243,227,184,.04)}
+.hero .tag{display:inline-block;background:rgba(243,227,184,.15);color:var(--gold-l);padding:4px 14px;border-radius:999px;font-size:.85rem;margin-bottom:18px}
+.hero h1{font-size:clamp(2.1rem,6vw,3.6rem);margin-bottom:14px}
+.hero p{max-width:560px;color:#f6e9ee;font-size:1.08rem;margin-bottom:26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:12px 24px;border-radius:999px;font-weight:600;display:inline-flex;gap:8px;align-items:center;border:2px solid transparent;cursor:pointer}
+.btn.gold{background:var(--gold);color:#2b1b1f}
+.btn.gold:hover{background:#dfab3a}
+.btn.ghost{border-color:var(--gold-l);color:var(--gold-l)}
+.btn.ghost:hover{background:rgba(243,227,184,.12)}
+.status{margin-top:22px;font-size:.95rem;color:var(--gold-l)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#888;margin-right:7px}
+.dot.on{background:#4ade80}.dot.off{background:#f87171}
+
+section{padding:64px 0}
+.sec-title{text-align:center;margin-bottom:36px}
+.sec-title h2{font-size:clamp(1.6rem,4vw,2.2rem);color:var(--maroon)}
+.sec-title p{color:var(--muted);margin-top:6px}
+.sec-title .bar{width:64px;height:3px;background:var(--gold);margin:12px auto 0;border-radius:2px}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 14px;text-align:center;font-weight:600;color:var(--maroon)}
+.cat i{display:block;font-style:normal;font-size:1.8rem;margin-bottom:6px}
+
+/* gallery */
+.filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:26px}
+.filters button{border:1px solid var(--line);background:#fff;padding:7px 16px;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer;color:var(--ink)}
+.filters button.active{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s;cursor:zoom-in}
+.item:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(122,18,48,.12)}
+.item .ph{aspect-ratio:4/5;background:linear-gradient(135deg,#f6ead0,#efd9a8);display:flex;align-items:center;justify-content:center;color:var(--maroon);font-size:2.4rem;overflow:hidden}
+.item img{width:100%;height:100%;object-fit:cover;display:block}
+.item .cap{padding:12px 14px}
+.item .cap b{display:block;font-size:.98rem}
+.item .cap small{color:var(--muted)}
+.item.hide{display:none}
+
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(20,8,12,.88);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:90vh;border-radius:10px}
+
+/* reviews */
+.rev-wrap{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.rev{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:20px}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:6px}
+.rev p{margin-bottom:10px}
+.rev small{color:var(--muted);font-weight:500}
+.rev-summary{max-width:760px;margin:0 auto 28px;text-align:center;font-size:1.05rem;color:var(--ink)}
+.rev-empty{text-align:center;color:var(--muted)}
+.rev-cta{text-align:center;margin-top:26px}
+.btn.maroon{background:var(--maroon);color:#fff}
+.btn.maroon:hover{background:var(--maroon-d)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+@media(max-width:820px){.contact{grid-template-columns:1fr}}
+.info{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.info h3{color:var(--maroon);margin-bottom:16px;font-size:1.3rem}
+.row{display:flex;gap:12px;margin-bottom:16px}
+.row .ic{font-size:1.25rem;width:28px}
+.row b{display:block}
+.row span,.row a{color:var(--muted)}
+.row a:hover{color:var(--maroon)}
+.map{border-radius:16px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+.map iframe{width:100%;height:100%;min-height:340px;border:0}
+
+footer{background:var(--maroon-d);color:#e9d5db;text-align:center;padding:28px 20px;font-size:.92rem}
+footer b{color:var(--gold-l)}
+
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 8px 20px rgba(0,0,0,.25);z-index:60}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">Dakshineswar <span>Varities</span> Stores</a>
+    <nav><ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="call-btn" href="tel:+919547917710">📞 Call</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">Ramnagar, West Bengal</span>
+    <h1>Dakshineswar Varities Stores</h1>
+    <p>Artificial jewellery, gaye holud flower sets, cosmetics, hair accessories, bags ar gift item - sob ek chhaader niche, sustho dame.</p>
+    <div class="btns">
+      <a class="btn gold" href="#products">Products dekhun</a>
+      <a class="btn ghost" href="#contact">Dokan er location</a>
+    </div>
+    <div class="status" id="status"><span class="dot"></span><span id="statusText">Somoy dekha hochhe...</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-title"><h2>Amader Collection</h2><div class="bar"></div></div>
+    <div class="cats">
+      <div class="cat"><i>💍</i>Artificial Jewellery</div>
+      <div class="cat"><i>🌼</i>Flower Jewellery</div>
+      <div class="cat"><i>💄</i>Cosmetics &amp; Skincare</div>
+      <div class="cat"><i>🎀</i>Hair Accessories</div>
+      <div class="cat"><i>👛</i>Ladies Purse</div>
+      <div class="cat"><i>🕯️</i>Gift &amp; Decor</div>
+    </div>
+  </div>
+</section>
+
+<section id="products" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-title"><h2>Amader Product</h2><p>Chhobi te click korle boro kore dekhte parben</p><div class="bar"></div></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="reviews" class="rev-wrap">
+  <div class="wrap">
+    <div class="sec-title"><h2>Customer Review</h2><p>Google Maps theke</p><div class="bar"></div></div>
+    <p class="rev-summary" id="revSummary"></p>
+    <div class="rev-grid" id="revGrid"></div>
+    <div class="rev-cta">
+      <a class="btn maroon" target="_blank" rel="noopener" href="https://maps.app.goo.gl/t6D72A2Bb6jxyX6k8">Google Maps e sob review dekhun ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-title"><h2>Jogajog &amp; Location</h2><div class="bar"></div></div>
+    <div class="contact">
+      <div class="info">
+        <h3>Dakshineswar Varities Stores</h3>
+        <div class="row"><div class="ic">👤</div><div><b>Proprietor</b><span>Moumita Pramanik Paul</span></div></div>
+        <div class="row"><div class="ic">📞</div><div><b>Phone</b><a href="tel:+919547917710">9547917710</a></div></div>
+        <div class="row"><div class="ic">📍</div><div><b>Address</b><span>Dhapdhapi High School (HS), Ramnagar, West Bengal 743387</span></div></div>
+        <div class="row"><div class="ic">🕗</div><div><b>Shop Time</b><span>Monday - Sunday, 8:00 AM - 8:00 PM</span></div></div>
+        <div class="btns" style="margin-top:20px">
+          <a class="btn maroon" href="tel:+919547917710">📞 Call korun</a>
+          <a class="btn ghost" style="border-color:var(--maroon);color:var(--maroon)" target="_blank" rel="noopener" href="https://maps.app.goo.gl/t6D72A2Bb6jxyX6k8">Directions ↗</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe loading="lazy" title="Shop location" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=22.3212057,88.4750703&z=17&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <b>Dakshineswar Varities Stores</b><br>
+  Proprietor: Moumita Pramanik Paul · 📞 9547917710 · Dhapdhapi High School (HS), Ramnagar, West Bengal 743387<br>
+  <span id="yr"></span> © All rights reserved
+</footer>
+
+<a class="wa" href="https://wa.me/919547917710" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<div id="lb"><img alt=""></div>
+
+<script>
+/* ============ 1) PRODUCTS ============
+   Chhobi gulo "images" folder e rakhun, ei file name e.
+   File na thakle placeholder dekhabe. */
+const PRODUCTS = [
+  {img:"flower-set-red-yellow.jpg", name:"Flower Jewellery Set (Red-Yellow)", cat:"Flower Jewellery", note:"Gaye holud / haldi set"},
+  {img:"flower-set-yellow.jpg",     name:"Flower Jewellery Set (Yellow)",     cat:"Flower Jewellery", note:"Gaye holud / haldi set"},
+  {img:"gold-necklace-set.jpg",     name:"Gold Layered Necklace with Earrings", cat:"Artificial Jewellery", note:"Golden finish"},
+  {img:"jhumka-red-black.jpg",      name:"Stone Jhumka (Red &amp; Black)",    cat:"Artificial Jewellery", note:"Tranent"},
+  {img:"silver-bangles.jpg",        name:"Silver Bangle Set with Hangings",   cat:"Artificial Jewellery", note:"Oxidised look"},
+  {img:"mirror-cuff.jpg",           name:"Mirror Work Cuff Bangle",           cat:"Artificial Jewellery", note:"Ghungroo hanging"},
+  {img:"oxidised-choker.jpg",       name:"Oxidised Choker Set",               cat:"Artificial Jewellery", note:"Silver finish"},
+  {img:"oxidised-necklace-tikka.jpg",name:"Oxidised Necklace with Tikka &amp; Earrings", cat:"Artificial Jewellery", note:"Festive set"},
+  {img:"peacock-earrings.jpg",      name:"Peacock Stud Earrings",             cat:"Artificial Jewellery", note:"3 pairs card"},
+  {img:"hair-clips.jpg",            name:"Stone &amp; Pearl Hair Clips",      cat:"Hair Accessories", note:"Golden, many designs"},
+  {img:"hair-bands.jpg",            name:"Colourful Hair Bands",              cat:"Hair Accessories", note:"Box pack"},
+  {img:"nivea-combo.jpg",           name:"Nivea Creme, Body Milk &amp; more",  cat:"Cosmetics", note:"Skincare"},
+  {img:"nivea-soft.jpg",            name:"Nivea Soft Cream",                  cat:"Cosmetics", note:"Face, body, hands"},
+  {img:"contour-stick.jpg",         name:"Contour + Highlight Stick",         cat:"Cosmetics", note:"Misiou Beauty"},
+  {img:"makeup-kit.jpg",            name:"Grace Heaven Make-up Kit",          cat:"Cosmetics", note:"Eyeshadow palette"},
+  {img:"ukun-marar-tel.jpg",        name:"Ukun Marar Tel (Permethrin Lotion 5%)", cat:"Health & Care", note:"60 ml"},
+  {img:"wallets.jpg",               name:"Ladies Wallet (Forever Beauty)",    cat:"Bags & Purse", note:"3 colours"},
+  {img:"lantern-candle.jpg",        name:"Lantern Candle Holder",             cat:"Gift & Decor", note:"Decor item"},
+  {img:"heart-candle.jpg",          name:"Heart Candle Stand",                cat:"Gift & Decor", note:"Gift item"}
+];
+
+/* ============ 2) REVIEWS ============
+   Google Maps theke real review copy kore ekhane boshan.
+   Ekta o na thakle "Google Maps e dekhun" button-i dekhabe. */
+const REVIEW_SUMMARY = "";   // e.g. "Customer ra dokan er collection ar byabohar niye khushi..."
+const REVIEWS = [
+  // {name:"Customer name", stars:5, text:"Review er lekha"},
+];
+
+/* ============ code ============ */
+const grid=document.getElementById('grid'), filters=document.getElementById('filters');
+const cats=['All',...new Set(PRODUCTS.map(p=>p.cat))];
+cats.forEach((c,i)=>{const b=document.createElement('button');b.textContent=c;if(!i)b.className='active';
+  b.onclick=()=>{[...filters.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');
+    [...grid.children].forEach(el=>el.classList.toggle('hide',c!=='All'&&el.dataset.cat!==c));};
+  filters.appendChild(b);});
+PRODUCTS.forEach(p=>{
+  const d=document.createElement('div');d.className='item';d.dataset.cat=p.cat;
+  d.innerHTML=`<div class="ph"><img src="images/${p.img}" alt="${p.name}" loading="lazy"></div>
+  <div class="cap"><b>${p.name}</b><small>${p.note}</small></div>`;
+  const im=d.querySelector('img');
+  im.onerror=()=>{im.remove();d.querySelector('.ph').textContent='🛍️';d.dataset.noimg=1;};
+  d.onclick=()=>{if(d.dataset.noimg)return;const lb=document.getElementById('lb');lb.querySelector('img').src=im.src;lb.classList.add('open');};
+  grid.appendChild(d);});
+document.getElementById('lb').onclick=e=>e.currentTarget.classList.remove('open');
+
+const rs=document.getElementById('revSummary'), rg=document.getElementById('revGrid');
+if(REVIEW_SUMMARY) rs.textContent=REVIEW_SUMMARY; else rs.style.display='none';
+if(REVIEWS.length){
+  REVIEWS.forEach(r=>{const d=document.createElement('div');d.className='rev';
+    d.innerHTML=`<div class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div><p></p><small></small>`;
+    d.querySelector('p').textContent='“'+r.text+'”';d.querySelector('small').textContent='— '+r.name;rg.appendChild(d);});
+}else{
+  rg.innerHTML='<p class="rev-empty" style="grid-column:1/-1">Amader customer der motamot Google Maps e dekhte parben.</p>';
+}
+
+/* open / closed (India time) */
+(function(){
+  const now=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));
+  const m=now.getHours()*60+now.getMinutes(), open=m>=480&&m<1200;
+  const dot=document.querySelector('#status .dot');
+  dot.classList.add(open?'on':'off');
+  document.getElementById('statusText').textContent=open?'Ekhon khola ache · 8:00 PM porjonto':'Ekhon bondho · Kal 8:00 AM theke khola';
+})();
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
